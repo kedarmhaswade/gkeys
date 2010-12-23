@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+rvm --create 1.9.2-p0@gkeys
+
+if [[ -s gkeys.gems ]] ; then
+    rvm gemset import gkeys.gems
+fi

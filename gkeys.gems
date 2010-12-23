@@ -1,0 +1,16 @@
+# gkeys.gems generated gem export file. Note that any env variable settings will be missing. Append these after using a ';' field separator
+archive-tar-minitar -v0.5.2
+bundler -v1.0.7
+columnize -v0.3.2
+diff-lcs -v1.1.2
+linecache19 -v0.5.11
+nokogiri -v1.4.4
+rake -v0.8.7
+rspec -v2.3.0
+rspec-core -v2.3.0
+rspec-expectations -v2.3.0
+rspec-mocks -v2.3.0
+ruby-debug-base19 -v0.11.24
+ruby-debug-ide -v0.4.16
+ruby_core_source -v0.1.4
+test-unit -v2.1.2

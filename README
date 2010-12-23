@@ -1,0 +1,83 @@
+A Tutor for Keys
+================
+
+Introduction
+------------
+
+** Real coders don't use mouse **.
+
+[Muscle Memory](http://en.wikipedia.org/wiki/Muscle_memory) is useful. When we
+remember keyboard shortcuts we end up increasing productivity. But we use a
+lllllllot of software and since one differs from another, one's keyboard
+shortcuts differ from that of another.
+
+Many a time, I have experienced what I call "memory lapses". I know what
+*function* I want a software to perform, but the keyboard shortcut for it
+has simply fallen through cracks (in my memory ;) ). What I need in that
+situation is simply a stimulus (which is of course available with a keyboard
+shortcut!) that brings back the memory. The stimulus is __named__ in plain
+English since I know __exactly what I want__.
+
+Well, if you are like me (I am sure you are), your wait is over with this
+small Ruby utility that learns and teaches. It learns a webpage (or other
+simpler formats) full of keyboard shortcuts and provides them to you
+in case you need. It has a simple interface that just waits for you to
+type an English phrase (and a few commands of its own) and then it returns
+possible matches for that phrase from the current software you have configured
+it for.
+
+All the strings used are friendly regular expressions -- as if it __knows__ what
+you are looking for. The interaction follows simplistic pattern:
+command-mnemonics [optional-phrase-regular-expression] -- that's all.
+
+The command matches increasing number of characters entered so that they are just
+enough to disambiguate (e.g. s, sh, sho, show all mean the "show" command).
+
+Here is a sample interaction:
+-----------------------------
+
+$ ./gkeys.rb
+:-) ----> Loaded [firefox, chrome, intellij, vim] shortcuts
+:-) k open
+:-) ----> Open File = Ctrl + O
+:-) ----> Open URL  = Ctrl + L
+....
+:-) use firefox
+:-) --- now showing firefox shortcuts
+:-) keys close
+....
+:-) use intellij
+:-) ----> now showing intellij shortcuts
+:-) use rubym
+:-) ----> now showing rubymine shortcuts
+:-) use vim
+:-) ----> now showing vim shortcuts
+:-) learn http://support.mozilla.com/en-US/kb/keyboard%20shortcuts
+:-) ----> learned the keyboard shortcuts for Firefox Support (will overwrite these from local store if you save)
+:-) learn shortcuts.txt
+:-) ----> learned the keyboard shortcuts for ...
+:-) list
+:-) ----> [firefox, chrome, intellij, rubymine]
+:-) help
+:-) ----> h[elp]           -- prints this help page
+:-) ----> exa[mples]       -- shows example usage
+:-) ----> le[arn] <url>    -- learns the shortcuts from this url, can be a local file too
+:-) ----> li[st]           -- lists names of currently learned software programs
+:-) ----> k[eys] <regex>   -- shows the shortcut for the actions identified by <regex>
+:-) ----> s[how] <strokes> -- shows function the pressed keys correspond to, if any (also shows what you pressed)
+:-) ----> t[ips] <number>  -- shows <number> __random__ shortcuts in current software program (with a delay)
+:-) ----> u[se] <name>     -- uses <name> software program as "current software program"
+:-) ----> q[uit] or exi[t] -- quits
+:-) quit
+:-) ----> Save? (Y/n) 
+:-) Bye. Happy keyboarding!
+$
+
+Like it?
+
+In __offline__ mode, you can use it to train yourself.
+
+Appeal to Shortcut documentation folks
+--------------------------------------
+Consider providing clear cut HTML pages documenting your product's keyboard shortcuts so that they (pages)
+are easier to parse ;)
