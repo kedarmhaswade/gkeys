@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require "test/unit"
-require_relative "shortcut"
+require_relative "../shortcut"
 
 class ShortcutTest < Test::Unit::TestCase
 

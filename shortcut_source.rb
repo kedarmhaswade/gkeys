@@ -2,7 +2,6 @@
 
 # Models a software program
 class Program
-  # To change this template use File | Settings | File Templates.
 end
 
 class ShortcutSource < Program
@@ -30,10 +29,10 @@ class ShortcutSource < Program
     self.- keys
   end
 
-  # the "index" is a regex, returns an array of all keystrokes whose values "match" given regex. Never returns nil.
+  # the "index" is a regex, returns an array of all keystrokes whose functions "match" given regex. Never returns nil.
   def [](str)
     keystrokes = Array.new
-    regex = /#{str}/i
+    regex      = /#{str}/i
     @map.each_pair do |keystroke, shortcut| # each_value is the keystroke (key)
       keystrokes << keystroke if shortcut.function =~ regex
     end
@@ -43,5 +42,5 @@ class ShortcutSource < Program
   def get_shortcut_for(regex)
     self.[](regex)
   end
-  
+
 end

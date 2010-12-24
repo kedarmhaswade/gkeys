@@ -20,7 +20,7 @@ class ShortcutSourceTest < Test::Unit::TestCase
 
   # Fake test
   def test_dummy_source
-    test_src = ShortcutSource.new("test software")
+    test_src  = ShortcutSource.new("test software")
     test_sc_1 = Shortcut.new("Ctrl+H", "Show Hierarchy")
     test_sc_2 = Shortcut.new("Ctrl+O", "Open File ...")
     test_src << test_sc_1 << test_sc_2

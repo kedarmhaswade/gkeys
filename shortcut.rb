@@ -4,8 +4,9 @@
 # its function.
 class Shortcut
   attr_reader :keystroke, :function
+
   def initialize(keys, function)
     @keystroke = keys
-    @function = function
+    @function  = function
   end
 end

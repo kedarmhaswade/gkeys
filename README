@@ -37,40 +37,40 @@ Here is a sample interaction:
 -----------------------------
 
 $ ./gkeys.rb
-:-) ----> Loaded [firefox, chrome, intellij, vim] shortcuts
-:-) k open
-:-) ----> Open File = Ctrl + O
-:-) ----> Open URL  = Ctrl + L
+----> Loaded [firefox, chrome, intellij, vim] shortcuts
+gk> k open
+----> Open File = Ctrl + O
+----> Open URL  = Ctrl + L
 ....
-:-) use firefox
-:-) --- now showing firefox shortcuts
-:-) keys close
+gk> use firefox
+----> now showing firefox shortcuts
+gk> keys close
 ....
-:-) use intellij
-:-) ----> now showing intellij shortcuts
-:-) use rubym
-:-) ----> now showing rubymine shortcuts
-:-) use vim
-:-) ----> now showing vim shortcuts
-:-) learn http://support.mozilla.com/en-US/kb/keyboard%20shortcuts
-:-) ----> learned the keyboard shortcuts for Firefox Support (will overwrite these from local store if you save)
-:-) learn shortcuts.txt
-:-) ----> learned the keyboard shortcuts for ...
-:-) list
-:-) ----> [firefox, chrome, intellij, rubymine]
-:-) help
-:-) ----> h[elp]           -- prints this help page
-:-) ----> exa[mples]       -- shows example usage
-:-) ----> le[arn] <url>    -- learns the shortcuts from this url, can be a local file too
-:-) ----> li[st]           -- lists names of currently learned software programs
-:-) ----> k[eys] <regex>   -- shows the shortcut for the actions identified by <regex>
-:-) ----> s[how] <strokes> -- shows function the pressed keys correspond to, if any (also shows what you pressed)
-:-) ----> t[ips] <number>  -- shows <number> __random__ shortcuts in current software program (with a delay)
-:-) ----> u[se] <name>     -- uses <name> software program as "current software program"
-:-) ----> q[uit] or exi[t] -- quits
-:-) quit
-:-) ----> Save? (Y/n) 
-:-) Bye. Happy keyboarding!
+gk> use intellij
+----> now showing intellij shortcuts
+gk> use rubym
+----> now showing rubymine shortcuts
+gk> use vim
+----> now showing vim shortcuts
+gk> learn http://support.mozilla.com/en-US/kb/keyboard%20shortcuts
+----> learned the keyboard shortcuts for Firefox Support (will overwrite these from local store if you save)
+gk> learn shortcuts.txt
+----> learned the keyboard shortcuts for ...
+gk> list
+----> [firefox, chrome, intellij, rubymine]
+gk> help
+----> h[elp]           -- prints this help page
+----> exa[mples]       -- shows example usage
+----> le[arn] <url>    -- learns the shortcuts from this url, can be a local file too
+----> li[st]           -- lists names of currently learned software programs
+----> k[eys] <regex>   -- shows the shortcut for the actions identified by <regex>
+----> s[how] <strokes> -- shows function the pressed keys correspond to, if any (also shows what you pressed)
+----> t[ips] <number>  -- shows <number> __random__ shortcuts in current software program (with a delay)
+----> u[se] <name>     -- uses <name> software program as "current software program"
+----> q[uit] or exi[t] -- quits
+gk> quit
+----> Save? (Y/n) 
+Bye. Happy keyboarding!
 $
 
 Like it?
