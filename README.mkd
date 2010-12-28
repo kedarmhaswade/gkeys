@@ -35,7 +35,7 @@ enough to disambiguate (e.g. s, sh, sho, show all mean the "show" command).
 
 Here is a sample interaction:
 -----------------------------
-
+<pre>
 $ ./gkeys.rb
 ----> Loaded [firefox, chrome, intellij, vim] shortcuts
 gk> k open
@@ -72,7 +72,7 @@ gk> quit
 ----> Save? (Y/n) 
 Bye. Happy keyboarding!
 $
-
+</pre>
 Like it?
 
 In __offline__ mode, you can use it to train yourself.
