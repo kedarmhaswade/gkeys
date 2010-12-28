@@ -11,13 +11,15 @@ class HelpCommand < Command
 
   def run(support)
     help_text = <<-HERE
+----> gkeys learns and teaches keyboard shortcuts of any software program. It encourages use of
+----> keyboard over mouse when possible. See https://github.com/kedarmhaswade/gkeys#readme
 ----> h[elp]           -- prints this help page
 ----> exa[mples]       -- shows example usage
 ----> le[arn] <url>    -- learns the shortcuts from this url, can be a local file too
 ----> li[st]           -- lists names of currently learned software programs
 ----> k[eys] <regex>   -- shows the shortcut for the actions identified by <regex>
-----> s[how] <strokes> -- shows function the pressed keys correspond to, if any (also shows what you pressed) (not yet implemented)
-----> t[ips] <number>  -- shows <number> __random__ shortcuts in current software program (with a delay)
+----> s[how] <strokes> -- shows function the pressed keys correspond to, if any (also shows what you pressed)
+----> t[ips] <number>  -- shows <number> __random__ shortcuts for current software program (with a delay)
 ----> u[se] <name>     -- uses <name> software program as "current software program"
 ----> q[uit] or exi[t] -- quits
     HERE
@@ -26,12 +28,18 @@ class HelpCommand < Command
 end
 
 class QuitCommand < Command
-  def initialize
-    super("quit")
+  def initialize(name="quit")
+    super(name)
   end
 
   def run(support)
     Success.new("Bye! Happy keyboarding!")
+  end
+end
+
+class ExitCommand < QuitCommand
+  def initialize
+    super("exit")
   end
 end
 
@@ -91,14 +99,6 @@ Bye. Happy keyboarding!
   end
 end
 
-class LearnCommand < Command
-  include NotYetImplemented
-
-  def initialize
-    super("learn")
-  end
-
-end
 
 class ListCommand < Command
   include NotYetImplemented

@@ -14,15 +14,16 @@ class ConsoleHandler
 
   def run
     support = CommandSupport.new
-    banner
+    @output.puts get_banner
+    @output.print get_prompt
     while true
       possibly_partial_name = get_cmd_name_and_configure_support(input.gets.chomp, support)
       command = Command.get(possibly_partial_name)
       result = command.run support
-      output.puts(get_formatted_message(result.message))
-      break if(possibly_partial_name =~ /\Aq[uit]*\Z/i)
-      output.puts "\n"
-      output.print get_prompt
+      @output.puts(get_formatted_message(result.message))
+      break if(possibly_partial_name =~ /\A(q[uit]*)|(exi[t]*)\Z/i)
+      @output.puts "\n"
+      @output.print get_prompt
     end
   end
 
@@ -36,14 +37,15 @@ class ConsoleHandler
     "gk> "
   end
 
+  def get_banner
+    "Welcome to gkeys. Type h[elp] for help."
+  end
+
   def get_cmd_name_and_configure_support(line, support)
     parts = line.scan(/\w+/)
     return nil unless parts
-    support.line_arguments = line[1, line.length-1]
+    support.line_arguments = parts[1..-1] #remaining arguments except the cmd name
     parts[0]
   end
 
-  def banner
-    @output.puts "Welcome to gkeys"
-  end
 end

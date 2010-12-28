@@ -26,10 +26,12 @@ class Command
 
   def self.initialize_commands_table
     require_relative "concrete_commands"
+    require_relative "learn_command"
 
     unless @@initialized_table
       @@commands  = {
         "examples" => ExamplesCommand.new,
+        "exit"     => ExitCommand.new,
         "help"     => HelpCommand.new,
         "keys"     => KeysCommand.new,
         "learn"    => LearnCommand.new,

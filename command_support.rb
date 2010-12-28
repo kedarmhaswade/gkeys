@@ -5,6 +5,6 @@ class CommandSupport
   attr_accessor :line_arguments, :current_program, :known_programs
 
   def initialize
-
+    @line_arguments = [] # avoid checking and NilClass by "contract"
   end
 end
